@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-navy: #1A2634;
+  --color-brand-charcoal: #2D2D2D;
+  --color-brand-teal: #3A6B7F;
+  --color-brand-silver: #E0E0E0;
+  --color-brand-offwhite: #F5F5F5;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-navy text-brand-offwhite;
+  }
+}
+
+.glass {
+  background: rgba(45, 45, 45, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(224, 224, 224, 0.1);
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-teal to-brand-silver;
+}
